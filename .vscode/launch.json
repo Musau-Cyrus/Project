@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Client_Details_Table",
+            "request": "launch",
+            "mainClass": "Client_Details_Table",
+            "projectName": "Hompage_c059d747"
+        },
+        {
+            "type": "java",
             "name": "Client_Details",
             "request": "launch",
             "mainClass": "Client_Details",

@@ -105,10 +105,7 @@ public class HomePage extends Application {
                 Client_Details client = new Client_Details();
                 client.start(new Stage());
                 primaryStage.close();//Close Home Page
-
-
                 // Here you can launch a new window for login page or change the scene to login page.
-                // For simplicity, I'll just print a message for demonstration purposes.
             }
         });
 
@@ -125,8 +122,6 @@ public class HomePage extends Application {
         borderPane.setTop(menuBar);
         BorderPane.setAlignment(contentBox, Pos.BOTTOM_LEFT);
         BorderPane.setAlignment(buttonBox, Pos.CENTER);
-
-        // Set background image
        
         // Set the scene
         Scene scene = new Scene(borderPane, 800, 600);
@@ -135,6 +130,7 @@ public class HomePage extends Application {
     }
 
     public static void main(String[] args) {
+
         launch(args);
     }
 }

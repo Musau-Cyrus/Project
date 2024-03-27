@@ -1,7 +1,6 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import java.time.LocalDate;
@@ -148,6 +147,30 @@ public void start(Stage primaryStage){
         String mail = email.getText();
         String number = phone.getText();
         String id_no = id.getText();
+        String gender = "";
+        String arrive = "";
+        String depart = "";
+        String purpose = "";
+
+        // Retrieve selected gender from ToggleGroup
+        if (groupGender.getSelectedToggle() != null) {
+            gender = ((RadioButton) groupGender.getSelectedToggle()).getText();
+        }
+
+        // Retrieve selected arrival date from DatePicker
+        if (arrival.getValue() != null) {
+            arrive = arrival.getValue().toString();
+        }
+
+        // Retrieve selected departure date from DatePicker
+        if (departure.getValue() != null) {
+            depart = departure.getValue().toString();
+        }
+
+        // Retrieve selected purpose of visit from ToggleGroup
+        if (groupPurpose.getSelectedToggle() != null) {
+            purpose = ((RadioButton) groupPurpose.getSelectedToggle()).getText();
+        }
 
         if (fname.isEmpty() || lname.isEmpty() || mail.isEmpty() || number.isEmpty() || id_no.isEmpty()) {
             errorLabel.setText("Please fill in all required fields!");
@@ -158,7 +181,8 @@ public void start(Stage primaryStage){
 
                 // Creating a prepared statement
                 // Creating a prepared statement
-                String query = "INSERT INTO client_details (first_name, last_name, surname, email, phone_number, id_number) VALUES (?, ?, ?, ?, ?, ?)";
+                String query = "INSERT INTO client_details (First_Name, Last_Name, Sur_Name, Email_Address, Phone_Number, ID_Number, Gender, Arrival_Date, Departure_Date, Purpose_of_Visit) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
 
                 PreparedStatement statement = connection.prepareStatement(query);
 
@@ -169,6 +193,10 @@ public void start(Stage primaryStage){
                 statement.setString(4, mail);
                 statement.setString(5, number);
                 statement.setString(6, id_no);
+                statement.setString(7, gender);
+                statement.setString(8, arrive);
+                statement.setString(9, depart);
+                statement.setString(10, purpose);
 
                 // Executing the statement to insert data
                 int rowsInserted = statement.executeUpdate();

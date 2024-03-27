@@ -13,6 +13,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -26,6 +28,17 @@ public class Login extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+
+        ImageView homeIcon = new ImageView(new Image("file:C:/Users/Administrator/Desktop/Code/Hompage/src/download.png"));
+        homeIcon.setFitWidth(32); // Set width of the icon
+        homeIcon.setFitHeight(32); // Set height of the icon
+
+        Button homeButton = new Button();
+        homeButton.setGraphic(homeIcon);
+        homeButton.setOnAction(event -> {
+            HomePage homePage = new HomePage();
+            homePage.start(primaryStage);
+        });
         // Creating label email
         Text text1 = new Text("Email");
 
@@ -58,11 +71,12 @@ public class Login extends Application {
         gridPane.setAlignment(Pos.CENTER);
 
         // Arranging all the nodes in the grid
-        gridPane.add(text1, 0, 0);
-        gridPane.add(textField1, 1, 0);
-        gridPane.add(text2, 0, 1);
-        gridPane.add(textField2, 1, 1);
-        gridPane.add(button1, 0, 2);
+        gridPane.add(homeButton, 0, 0);
+        gridPane.add(text1,0, 1);
+        gridPane.add(textField1, 1, 1);
+        gridPane.add(text2, 0, 2);
+        gridPane.add(textField2, 1, 2);
+        gridPane.add(button1, 0, 3);
 
         // Styling nodes
         button1.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
@@ -134,6 +148,7 @@ public class Login extends Application {
     }
 
     public static void main(String args[]) {
+
         launch(args);
     }
 }
