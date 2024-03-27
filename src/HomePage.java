@@ -44,9 +44,17 @@ public class HomePage extends Application {
         MenuItem loginItem = new MenuItem("Login");
        
 
-        MenuItem phoneItem = new MenuItem("Phone");
-        MenuItem emailItem = new MenuItem("email");
-        MenuItem whatsappItem = new MenuItem("Whatsapp");
+        Menu phoneItem = new Menu("Phone");
+        MenuItem number = new MenuItem("+254 701345670");
+        MenuItem number1 = new MenuItem("+254 798765432");
+        phoneItem.getItems().addAll(number, number1);
+        Menu emailItem = new Menu("email");
+        MenuItem email = new MenuItem("springshotel@gmail.com");
+        emailItem.getItems().addAll(email);
+        Menu whatsappItem = new Menu("Whatsapp");
+        MenuItem whatsapp = new MenuItem("https://wa.me/+254 012345678");
+        whatsappItem.getItems().addAll(whatsapp);
+
 
         MenuItem aboutItem = new MenuItem("Google Maps Location");
 
@@ -55,7 +63,6 @@ public class HomePage extends Application {
         contactMenu.getItems().addAll(phoneItem, emailItem, whatsappItem);
         locationMenu.getItems().add(aboutItem);
 
-        // Add menus to the menu bar
         menuBar.getMenus().addAll(adminMenu, contactMenu, locationMenu, aboutMenu);
         menuBar.setStyle("-fx-background-color:grey ;");
           menuBar.getMenus().forEach(menu -> menu.setStyle("-fx-text-fill: white;")); // Customize menu text color
