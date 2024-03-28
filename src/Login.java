@@ -52,7 +52,9 @@ public class Login extends Application {
         PasswordField textField2 = new PasswordField();
 
         // Creating Buttons
-        Button button1 = new Button("Login");
+        Button button1 = new Button();
+        button1.setText("Login");
+        button1.setAlignment(Pos.CENTER);
 
         // Creating a Grid Pane
         GridPane gridPane = new GridPane();

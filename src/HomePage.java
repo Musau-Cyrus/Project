@@ -104,6 +104,7 @@ public class HomePage extends Application {
         // Create buttons
         Button bookButton = new Button("Check Availability");
         bookButton.setStyle("-fx-font-size: 16px;");
+        bookButton.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
         // Event handler for the login menu item
         bookButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override

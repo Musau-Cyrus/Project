@@ -44,7 +44,7 @@ public class Client_Details_Table extends Application {
         vbox.setAlignment(Pos.CENTER);
 
         // Create the scene and set it to the stage
-        Scene scene = new Scene(vbox, 800, 600);
+        Scene scene = new Scene(vbox, 700, 600);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Clients Details");
         primaryStage.show();

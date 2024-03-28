@@ -19,6 +19,7 @@ public class HotelReservationPayment extends Application {
         Label cardNumberLabel = new Label("Credit Card Number:");
         TextField cardNumberField = new TextField();
         Button confirmButton = new Button("Confirm Payment");
+        confirmButton.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
 
         // Layout
         VBox root = new VBox();

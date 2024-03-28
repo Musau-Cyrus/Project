@@ -141,6 +141,7 @@ public void start(Stage primaryStage){
     Text text5 = new Text("Pay full amount now to secure your reservation.");
     Text text6 = new Text("Pay securely using: Visa, MasterCard, AMEX or mobile money.");
     Button btn = new Button("Book Now");
+    btn.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
     btn.setOnAction(event -> {
         String fname = firstname.getText();
         String lname = lastname.getText();
@@ -186,7 +187,7 @@ public void start(Stage primaryStage){
 
                 PreparedStatement statement = connection.prepareStatement(query);
 
-// Setting parameters for the prepared statement
+                // Setting parameters for the prepared statement
                 statement.setString(1, fname);
                 statement.setString(2, lname);
                 statement.setString(3, surname.getText()); // Add surname
@@ -222,6 +223,7 @@ public void start(Stage primaryStage){
     });
 
     Button btn2 = new Button("Back");
+    btn2.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
         btn2.setOnAction(event -> {
             HomePage homePage = new HomePage();
             homePage.start(primaryStage);

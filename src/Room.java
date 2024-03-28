@@ -19,6 +19,7 @@ public class Room extends Application {
         Text two = new Text("Half Board - KES13,000 for one night.");
         Text three= new Text("Full Board - KES15,000 for one night.");
         Button btn1 = new Button("Book");
+        btn1.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
         btn1.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -42,6 +43,7 @@ public class Room extends Application {
         Text txt2 = new Text("Half Board - KES13,000 for one night.");
         Text txt3= new Text("Full Board - KES15,000 for one night.");
         Button btn2 = new Button("Book");
+        btn2.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
         btn2.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -65,6 +67,7 @@ public class Room extends Application {
         Text text2 = new Text("Half Board - KES13,000 for one night.");
         Text text3= new Text("Full Board - KES15,000 for one night.");
         Button btn3 = new Button("Book");
+        btn3.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
         btn3.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -83,7 +86,7 @@ public class Room extends Application {
          VBox.setMargin(btn3, new Insets(5,5,40,40));
         
         VBox vboxMain = new VBox(vbox,  vbox2, vbox3);
-         vboxMain.setStyle("-fx-background-color:CYAN");
+         vboxMain.setStyle("-fx-background-color:#b0bebe");
          vboxMain.setPadding(new Insets(10, 10, 10, 10));
         
         Scene scene = new Scene(vboxMain, 900, 600);
