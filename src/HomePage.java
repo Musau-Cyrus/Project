@@ -83,7 +83,7 @@ public class HomePage extends Application {
             }
         });
 
-        Image image = new Image("file:C:/Users/Administrator/Documents/NetBeansProjects/BG_Image/src/2.jpg");
+        Image image = new Image("file:C:/Users/Administrator/Documents/NetBeansProjects/BG_Image/src/2.PNG");
 
         BackgroundSize bSize = new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, false);
 
@@ -96,10 +96,10 @@ public class HomePage extends Application {
         
 
         // Create content elements
-        Text titleLabel = new Text("Welcome to Our Hotel");
-        titleLabel.setStyle("-fx-font-size: 24px; -fx-font-weight: bold;");
+       /* Text titleLabel = new Text("Welcome to Our Hotel");
+        titleLabel.setStyle("-fx-font-size: 30px; -fx-font-weight: bold;");
 
-        Text descriptionLabel = new Text("Enjoy a luxurious stay with breathtaking views.");
+        Text descriptionLabel = new Text("Enjoy a luxurious stay with breathtaking views.");*/
 
         // Create buttons
         Button bookButton = new Button("Check Availability");
@@ -118,7 +118,7 @@ public class HomePage extends Application {
         });
 
         // Add elements to containers
-        contentBox.getChildren().addAll(titleLabel, descriptionLabel);
+        //contentBox.getChildren().addAll(titleLabel, descriptionLabel);
         buttonBox.getChildren().addAll(bookButton);
         contentBox.setAlignment(Pos.CENTER);
         buttonBox.setAlignment(Pos.CENTER);
